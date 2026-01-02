@@ -28,80 +28,80 @@ export const portfolioItems: PortfolioItem[] = [
         image: image1
     },
     {
-        title: "Quadro de Distribuição Industrial",
-        category: "Comercial",
-        description: "Instalação de quadro de força para indústria",
+        title: "Instalação de iluminação por leds",
+        category: "Iluminação",
+        description: "Instalação de iluminação por leds em residência de alto padrão",
         image: image2
     },
     {
-        title: "Iluminação LED Comercial",
+        title: "Instalação de iluminação por leds",
         category: "Iluminação",
-        description: "Retrofit de iluminação em loja de shopping",
-        image: image6
+        description: "Instalação de iluminação por leds em residência de alto padrão",
+        image: image3
     },
     {
-        title: "Manutenção Predial",
-        category: "Manutenção",
-        description: "Manutenção preventiva em condomínio residencial",
-        image: image3
+        title: "Iluminação externa de Residência",
+        category: "Residencial",
+        description: "Instalação de iluminação externa em residência",
+        image: image4
     },
     {
         title: "Cabeamento Estruturado",
         category: "Comercial",
         description: "Infraestrutura de rede para escritório corporativo",
-        image: image4
-    },
-    {
-        title: "Instalação Residencial Completa",
-        category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
         image: image5
     },
     {
         title: "Instalação Residencial Completa",
         category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        description: "Projeto elétrico completo em residência",
+        image: image6
+    },
+    {
+        title: "Instalação de ponto de carregamento",
+        category: "Comercial",
+        description: "Instalação de ponto de carregamento para carros elétricos em empresa",
         image: image7
     },
     {
-        title: "Instalação Residencial Completa",
+        title: "Instalação de LEDs em ambiente residencial",
         category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        description: "Instalação de iluminação por leds para ambientação residencial",
         image: image8
     },
     {
-        title: "Instalação Residencial Completa",
-        category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        title: "Iluminação completa em auditório",
+        category: "Comercial",
+        description: "Instalação de iluminação completa para auditório corporativo",
         image: image9
     },
     {
         title: "Instalação Residencial Completa",
         category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        description: "Projeto de iluminação completo em residência de alto padrão",
         image: image10
     },
     {
-        title: "Instalação Residencial Completa",
-        category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        title: "Instalação completa em escritório corporativo",
+        category: "Comercial",
+        description: "Projeto elétrico de cabeamento, iluminação e conexão wifi em escritório corporativo",
         image: image11
     },
     {
-        title: "Instalação Residencial Completa",
-        category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        title: "Iluminação por LEDs em banheiro residencial",
+        category: "Iluminação",
+        description: "Instalação de iluminação por leds para banheiro residencial",
         image: image12
     },
     {
-        title: "Instalação Residencial Completa",
-        category: "Residencial",
-        description: "Projeto elétrico completo em residência de alto padrão",
+        title: "Iluminação por LEDs em cozinha residencial",
+        category: "Iluminação",
+        description: "Instalação de iluminação por leds para cozinha residencial",
         image: image13
     },
     {
         title: "Instalação Residencial Completa",
-        category: "Residencial",
+        category: "Iluminação",
         description: "Projeto elétrico completo em residência de alto padrão",
         image: image14
     },
