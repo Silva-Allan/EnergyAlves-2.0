@@ -1,62 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import image1 from "../assets/image1.png";
-import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
-import image5 from "../assets/image5.jpg";
-import image6 from "../assets/image6.jpg";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { portfolioItems, portfolioCategories } from "@/data/portfolioData";
 
-const portfolioItems = [
-  {
-    title: "Instalação Residencial Completa",
-    category: "Residencial",
-    description: "Projeto elétrico completo em residência de alto padrão",
-    image: image1
-  },
-  {
-    title: "Quadro de Distribuição Industrial",
-    category: "Comercial",
-    description: "Instalação de quadro de força para indústria",
-    image: image2
-  },
-  {
-    title: "Iluminação LED Comercial",
-    category: "Iluminação",
-    description: "Retrofit de iluminação em loja de shopping",
-    image: image6
-  },
-  {
-    title: "Manutenção Predial",
-    category: "Manutenção",
-    description: "Manutenção preventiva em condomínio residencial",
-    image: image3
-  },
-  {
-    title: "Cabeamento Estruturado",
-    category: "Comercial",
-    description: "Infraestrutura de rede para escritório corporativo",
-    image: image4
-  },
-  {
-    title: "Instalação Residencial Completa",
-    category: "Residencial",
-    description: "Projeto elétrico completo em residência de alto padrão",
-    image: image5
-  }
-];
+interface PortfolioSectionProps {
+  isFullPage?: boolean;
+}
 
-const categories = [
-  "Todos",
-  "Residencial",
-  "Comercial",
-  "Iluminação",
-  "Manutenção",
-];
-
-export const PortfolioSection = () => {
+export const PortfolioSection = ({ isFullPage = false }: PortfolioSectionProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const filtersRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
 
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -68,6 +23,9 @@ export const PortfolioSection = () => {
         (item) => item.category === activeCategory
       );
 
+  // Se não for página completa, limita a 6 itens (ajustado pelo user)
+  const displayItems = isFullPage ? filteredItems : filteredItems.slice(0, 6);
+
   const scrollFilters = (direction: "left" | "right") => {
     if (!filtersRef.current) return;
 
@@ -78,7 +36,7 @@ export const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-24 overflow-x-hidden">
+    <section id="portfolio" className={`py-24 overflow-x-hidden ${isFullPage ? "bg-zinc-950 pt-10" : ""}`}>
       <div ref={ref} className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -91,8 +49,9 @@ export const PortfolioSection = () => {
             Portfólio
           </span>
 
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4 ${isFullPage ? "text-white" : ""}`}>
             Nossos <span className="text-gradient">Trabalhos</span>
+            {isFullPage && <span className="block text-2xl mt-2 text-white">Todos os Projetos</span>}
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
@@ -124,7 +83,7 @@ export const PortfolioSection = () => {
               overflow-hidden
             "
           >
-            {categories.map((category) => (
+            {portfolioCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
@@ -153,9 +112,9 @@ export const PortfolioSection = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {filteredItems.map((item, index) => (
+          {displayItems.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -197,6 +156,18 @@ export const PortfolioSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {!isFullPage && (
+          <div className="mt-12 text-center">
+            <Button
+              onClick={() => navigate("/portfolio")}
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-primary/20 transition-all duration-300"
+            >
+              Ver todos os projetos
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

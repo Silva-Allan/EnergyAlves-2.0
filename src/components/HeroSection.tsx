@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Zap, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-electrician.jpg";
+import fundoHero from "@/assets/fundoHero.png";
 
 export const HeroSection = () => {
   return (
@@ -10,26 +11,26 @@ export const HeroSection = () => {
       className="
         relative 
         min-h-screen 
-        flex items-center 
+        flex items-start md:items-center 
         justify-center 
-        pt-20 md:pt-16
+        pt-32 md:pt-16
         overflow-hidden
         overflow-x-hidden
         bg-zinc-900
       "
     >
-      {/* ===== BACKGROUND DESKTOP (imagem) ===== */}
-      <div className="absolute inset-0 z-0 hidden md:block overflow-hidden">
+      {/* ===== BACKGROUND DESKTOP (imagem nova) ===== */}
+      <div className="absolute inset-0 z-0 hidden md:block overflow-hidden bg-black">
         <img
-          src={heroImage}
+          src={fundoHero}
           alt="Eletricista profissional"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-contain object-right"
         />
 
-        {/* Gradientes de contraste */}
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/95 via-zinc-900/80 to-zinc-900/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Gradiente: Preto sólido na esquerda, sumindo para a direita */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black via-[60%] to-transparent" />
+        {/* Overlay extra suave para garantir leitura */}
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* ===== BACKGROUND MOBILE (sem imagem) ===== */}

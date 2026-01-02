@@ -50,7 +50,7 @@ export const Header = () => {
         transition-all duration-300
         ${isScrolled
           ? "bg-zinc-900/95 backdrop-blur-xl shadow-lg border-b border-white/5"
-          : "bg-gradient-to-b from-zinc-900/90 to-transparent backdrop-blur-md"}
+          : "bg-transparent"}
       `}
     >
       <div className="max-w-7xl mx-auto px-4">
