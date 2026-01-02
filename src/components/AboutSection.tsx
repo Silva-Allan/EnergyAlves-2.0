@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { Award, Users, Clock, Shield } from "lucide-react";
 
 const stats = [
-  { icon: Clock, value: "10+", label: "Anos de Experiência" },
-  { icon: Users, value: "500+", label: "Clientes Satisfeitos" },
-  { icon: Award, value: "1000+", label: "Projetos Concluídos" },
+  { icon: Clock, value: "5+", label: "Anos de Experiência" },
+  { icon: Users, value: "600+", label: "Clientes Satisfeitos" },
+  { icon: Award, value: "100+", label: "Projetos Concluídos" },
   { icon: Shield, value: "100%", label: "Segurança Garantida" },
 ];
 
@@ -33,10 +33,17 @@ export const AboutSection = () => {
             <span className="text-gradient">Excelência</span> em Serviços Elétricos
           </h2>
 
-          <p className="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg">
-            A Energy Alves é referência em instalações e manutenções elétricas em
-            Chapecó/SC, atuando com alto padrão técnico, segurança e compromisso
-            com cada projeto.
+          <p className="text-muted-foreground max-w-1xl mx-auto text-base md:text-lg">
+            Fundada em 2020, a empresa Energy Alves nasceu da visão de um negócio familiar 
+            comprometido com a excelência técnica e a segurança elétrica. Com 5 anos de 
+            atuação sólida no mercado, evoluímos de pequenos reparos para projetos complexos 
+            nos setores residencial, predial e industrial. 
+            Nosso diferencial está na responsabilidade: somos uma empresa registrada que 
+            prioriza a vida acima de tudo. Por isso, contamos com todas as certificações 
+            obrigatórias, incluindo as NR-10 (Segurança em Eletricidade) e NR-35 (Trabalho em Altura). 
+            Quando você contrata a nossa família para cuidar da sua, você recebe mais do que energia; 
+            recebe o compromisso de quem entende que uma instalação segura é a base de qualquer 
+            empreendimento.
           </p>
         </motion.div>
 
@@ -96,9 +103,10 @@ export const AboutSection = () => {
                 Nossa <span className="text-primary">Missão</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Entregar soluções elétricas seguras, eficientes e duráveis,
-                utilizando práticas modernas, materiais certificados e uma equipe
-                altamente qualificada, sempre respeitando o cliente e o projeto.
+                Fornecer soluções em instalações elétricas residenciais,
+                prediais e industriais com excelência técnica e rigorosa
+                conformidade às normas de segurança (NRs), garantindo o
+                bem-estar dos nossos clientes e a eficiência de seus sistemas.
               </p>
             </div>
 
@@ -110,10 +118,10 @@ export const AboutSection = () => {
 
               <ul className="space-y-3">
                 {[
-                  "Compromisso absoluto com a segurança",
-                  "Excelência técnica em cada detalhe",
-                  "Pontualidade e profissionalismo",
-                  "Transparência e preço justo",
+                  "Segurança: Rigoroso cumprimento das NRs para proteger vidas e patrimônios.",
+                  "Transparência: Honestidade em orçamentos e prazos, honrando sua confiança.",
+                  "Excelência Técnica: Perfeccionismo e atualização constante na execução.",
+                  "Confiança: Relações duradouras com o cuidado de nossa história.",
                 ].map((item, index) => (
                   <li
                     key={index}

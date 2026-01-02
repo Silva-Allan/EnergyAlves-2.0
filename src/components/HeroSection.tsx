@@ -101,9 +101,9 @@ export const HeroSection = () => {
               leading-relaxed
             "
           >
-            Há mais de <strong className="text-white">10 anos</strong> oferecendo
+            Há mais de <strong className="text-white">5 anos</strong> oferecendo
             serviços elétricos residenciais, prediais e comerciais com excelência
-            em <strong className="text-white">Chapecó/SC</strong>.
+            em <strong className="text-white">Chapecó e região</strong>.
           </motion.p>
 
           {/* CTAs */}
