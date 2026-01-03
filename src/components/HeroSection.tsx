@@ -46,7 +46,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="
               inline-flex items-center gap-2 
-              bg-white/15 backdrop-blur-sm 
+              bg-white/15
+              md:backdrop-blur-sm
               border border-white/25 
               rounded-full 
               px-4 py-2 
